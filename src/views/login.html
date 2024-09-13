@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookworm's Nest - Kirish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="library.html">Kutubxona</a></li>
+                <li><a href="about.html">Biz haqimizda</a></li>
+                <li><a href="register.html">Ro'yxatdan o'tish</a></li>
+                <li><a href="login.html" class="active">Kirish</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Kirish</h1>
+        <form action="/login" method="post">
+            <label for="username">Foydalanuvchi nomi:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Parol:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Kirish</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bookworm's Nest. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>

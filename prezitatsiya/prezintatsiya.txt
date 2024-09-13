@@ -1,0 +1,137 @@
+Bookworm's Nest Loyihasi: Hozirgacha Bajargan Amalalar
+1. Loyihaning Asosiy Tuzilishi:
+
+    Texnologiyalar:
+        Frontend: HTML, CSS, JavaScript
+        Backend: Node.js, Express.js
+        Ma'lumotlar bazasi: PostgreSQL, Sequelize
+        Xavfsizlik: JWT (Access va Refresh Token), RBAC
+
+2. CRUD Operatsiyalari:
+
+2.1. Kitoblar:
+
+    bookController.js:
+        Kitob qo'shish (createBook)
+        Barcha kitoblarni olish (getAllBooks)
+        Yakuniy kitobni olish (getBookById)
+        Kitobni yangilash (updateBook)
+        Kitobni o'chirish (deleteBook)
+
+    bookRoutes.js:
+        Kitoblarni boshqarish uchun marshrutlar:
+            POST /books - Kitob qo'shish
+            GET /books - Barcha kitoblarni olish
+            GET /books/:id - Yakuniy kitobni olish
+            PUT /books/:id - Kitobni yangilash
+            DELETE /books/:id - Kitobni o'chirish
+
+2.2. Foydalanuvchilar:
+
+    userController.js:
+        Foydalanuvchi ro'yxatdan o'tishi (registerUser)
+        Foydalanuvchi kirishi (loginUser)
+        Foydalanuvchini yangilash (updateUser)
+        Foydalanuvchini o'chirish (deleteUser)
+
+    userRoutes.js:
+        Foydalanuvchilarni boshqarish uchun marshrutlar:
+            POST /users/register - Ro'yxatdan o'tish
+            POST /users/login - Kirish
+            PUT /users/:id - Yangilash
+            DELETE /users/:id - O'chirish
+
+2.3. Kategoriyalar:
+
+    categoryController.js:
+        Kategoriya qo'shish (createCategory)
+        Barcha kategoriyalarni olish (getAllCategories)
+        Yakuniy kategoriyani olish (getCategoryById)
+        Kategoriyani yangilash (updateCategory)
+        Kategoriyani o'chirish (deleteCategory)
+
+    categoryRoutes.js:
+        Kategoriyalarni boshqarish uchun marshrutlar:
+            POST /categories - Kategoriya qo'shish
+            GET /categories - Barcha kategoriyalarni olish
+            GET /categories/:id - Yakuniy kategoriyani olish
+            PUT /categories/:id - Yangilash
+            DELETE /categories/:id - O'chirish
+
+2.4. Mijozlar:
+
+    customerController.js:
+        Mijoz qo'shish (createCustomer)
+        Barcha mijozlarni olish (getAllCustomers)
+        Yakuniy mijozni olish (getCustomerById)
+        Mijozni yangilash (updateCustomer)
+        Mijozni o'chirish (deleteCustomer)
+
+    customerRoutes.js:
+        Mijozlarni boshqarish uchun marshrutlar:
+            POST /customers - Mijoz qo'shish
+            GET /customers - Barcha mijozlarni olish
+            GET /customers/:id - Yakuniy mijozni olish
+            PUT /customers/:id - Yangilash
+            DELETE /customers/:id - O'chirish
+
+2.5. Buyurtmalar:
+
+    orderController.js:
+        Buyurtma qo'shish (createOrder)
+        Barcha buyurtmalarni olish (getAllOrders)
+        Yakuniy buyurtmani olish (getOrderById)
+        Buyurtmani yangilash (updateOrder)
+        Buyurtmani o'chirish (deleteOrder)
+
+    orderRoutes.js:
+        Buyurtmalarni boshqarish uchun marshrutlar:
+            POST /orders - Buyurtma qo'shish
+            GET /orders - Barcha buyurtmalarni olish
+            GET /orders/:id - Yakuniy buyurtmani olish
+            PUT /orders/:id - Yangilash
+            DELETE /orders/:id - O'chirish
+
+2.6. Buyurtma Elementlari:
+
+    orderItemController.js:
+        Buyurtma elementini qo'shish (createOrderItem)
+        Barcha buyurtma elementlarini olish (getAllOrderItems)
+        Yakuniy buyurtma elementini olish (getOrderItemById)
+        Buyurtma elementini yangilash (updateOrderItem)
+        Buyurtma elementini o'chirish (deleteOrderItem)
+
+    orderItemRoutes.js:
+        Buyurtma elementlarini boshqarish uchun marshrutlar:
+            POST /order-items - Buyurtma elementi qo'shish
+            GET /order-items - Barcha buyurtma elementlarini olish
+            GET /order-items/:id - Yakuniy buyurtma elementini olish
+            PUT /order-items/:id - Yangilash
+            DELETE /order-items/:id - O'chirish
+
+3. Xavfsizlik va Foydalanuvchi Ruxsatnomalari:
+
+    RBAC (Role-Based Access Control):
+        Foydalanuvchi rollari (admin, user) bilan cheklovlar o'rnatildi.
+        roleMiddleware orqali ma'lum rollarga ruxsat beriladi.
+
+    Tokenlar:
+        Access Token va Refresh Token foydalaniladi.
+        Tokenlarni yaratish, tekshirish, va yangilash kodlari o'z ichiga olindi.
+
+    Validatsiya:
+        express-validator yordamida ma'lumotlarni tekshirish va to'g'ri formatda bo'lishini ta'minlash.
+
+    File Upload:
+        multer yordamida fayllarni yuklash va saqlash amalga oshirildi.
+
+    Parolni Qayta Tiklash:
+        Parolni qayta tiklash uchun kodlarni yozish va tokenlar orqali qayta tiklash funksiyalari qo'shildi.
+
+4. Xatolikni Boshqarish:
+
+    Error Handling:
+        Xatoliklarni boshqarish uchun umumiy errorHandler middleware yaratildi, bu foydalanuvchilarga to'g'ri va xavfsiz xatolik xabarlarini ko'rsatishga yordam beradi.
+
+
+
